@@ -1029,6 +1029,18 @@ button {
     width: 50% !important;
     flex: 0 1 50% !important;
   }
+  .aboutHome .about-img img{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+  }
+  .our-services .serv-img{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .our-services .serv-img .imgAfter{
+    right: 110px;
+  }
 }
 
 @media (max-width: 960px) {
@@ -1047,12 +1059,21 @@ button {
 }
 
 @media (max-width: 479px) {
+  .our-services .serv-img .imgAfter{
+    right: 0;
+  }
+  .our-services .section-header h5{
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 376px) {
 }
 
 @media (max-width: 321px) {
+  .aboutHome .about-content h5{
+    font-size: 30px;
+  }
 }
 
 .activeInput {
