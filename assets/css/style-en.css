@@ -1,0 +1,514 @@
+/* 126 of 1301 CSS properties converted by rtl.daskhat.ir 
+ These properties should be override originals. 
+ just load rtl css file after original css file.*/ 
+
+/* body {direction:rtl;} */
+
+body{
+    direction: ltr;
+}
+
+#floating{
+    left: 20px;
+    right: auto;
+}
+
+.splash{
+    left: 0;
+    right: auto;
+}
+
+.splash .loadProgress .lineStyle{
+    right: 0;
+    left: auto;
+}
+
+.sidenav{
+    left: -400px;
+    right: auto;
+}
+
+.sidenav li{
+    text-align: left;
+}
+
+.sidenav a{
+    padding-left: 56px;
+    padding-right: 0;
+}
+
+.sidenav .closebtn{
+    right: 0;
+    left: auto;
+}
+
+.sidenav .NesteListParent i{
+    right: 10px;
+    left: auto;
+}
+
+.sidenav .sideMenue{
+    padding-left: 20px;
+    padding-right: 0;
+}
+
+.sidenav .sideMenue li{
+    padding-left: 20px;
+    padding-right: 0;
+}
+
+.sidenav .sideMenue li a{
+    padding-left: 20px;
+    padding-right: 0;
+}
+
+.sidenav .sideMenue li a::before{
+    left: 0;
+    right: auto;
+}
+
+.sidenav .lang{
+    direction: ltr;
+}
+
+.bg-sidenavOpen{
+    right: 0;
+    left: 0;
+}
+
+.selectOverlay{
+    right: 0;
+    left: auto;
+}
+
+.myNavbar .Logo{
+    float: left;
+}
+
+.myNavbar .links{
+    float: right;
+}
+
+.myNavbar .links .navLink{
+    float: left;
+}
+
+.myNavbar .lang{
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+.myNavbar .lang i{
+    right: 10px;
+    left: auto;
+}
+
+.myNavbar .lang .sideMenue{
+    right: 0;
+    left: auto;
+}
+
+.myNavbar .sideMenue li a{
+    padding-left: 25px;
+    padding-right: 0;
+}
+
+.header .slider-item::after{
+    right: 0;
+    left: auto;
+}
+
+
+.vision-card .card-content{
+    padding-left: 40px;
+    padding-right: 70px;
+}
+
+.vision-card .card-content-hover{
+    padding-left: 40px;
+    padding-right: 70px;
+}
+
+.vision-card::after{
+    right: 0;
+    left: auto;
+}
+
+
+.distinguishUs::after{
+    right: 0;
+    left: auto;
+}
+
+.join .join-img::after{
+    right: 0;
+    left: auto;
+}
+
+.clients .section-header{
+    margin: 52px 0 64px 0 ;
+}
+
+.breadcrumb{
+    padding: 130px 0 102px 0 ;
+}
+
+.breadcrumb::after{
+    right: 0;
+    left: auto;
+}
+
+
+.breadcrumb ul li::after{
+    margin-left: 14px;
+    margin-right: auto;
+}
+
+.breadcrumb ul li:first-child{
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+
+.vision-page .vision-content{
+    padding-right: 53px;
+    padding-left: 50px;
+}
+
+.conact-uspage .contact-form{
+    padding: 75px 81px 58px 81px ;
+}
+
+.conact-uspage .contact-info{
+    padding: 39px 47px 39px 47px ;
+}
+
+.conact-uspage .contact-info .contact-div{
+    padding-left: 14px;
+    padding-right: 0;
+}
+
+.conact-uspage .contact-info .contact-div::before{
+    left: 0;
+    right: auto;
+}
+
+.conact-uspage .contact-info .contact-div img{
+    margin-left: 24px;
+    margin-right: auto;
+}
+
+.condition-page #accordion .card .card-header h5 .btn-link{
+    text-align: left;
+    padding-left: 35px;
+    padding-right: 0;
+}
+
+.condition-page #accordion .card .card-header h5 .btn-link::after{
+    right: 32px;
+    left: auto;
+}
+
+.condition-page .approve .container{
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+.condition-page .approve .container .checkmark:after{
+    right: 6px;
+    left: auto;
+    border-width: 0 0 2px 2px ;
+}
+
+.condition-page .approve .checkmark{
+    left: 0;
+    right: auto;
+}
+
+.new-company .new-company-form{
+    padding: 37px 70px 50px 51px ;
+}
+
+.new-company .form-section-header::after{
+    left: 0;
+    right: auto;
+}
+
+.new-company .row{
+    padding-left: 35px;
+    padding-right: 0;
+}
+
+.new-company .note{
+    padding-left: 45px;
+    padding-right: 20px;
+}
+
+.new-company .aprrove .btn-submit{
+    text-align: right;
+}
+
+.new-company .aprrove .container{
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+.new-company .aprrove .checkmark{
+    left: 0;
+    right: auto;
+}
+
+.new-company .mycustom-select-parent .mycustom-select .title{
+    padding-left: 12px;
+    padding-right: 0;
+}
+
+
+.new-company .mycustom-select-parent .mycustom-select .selectList{
+    padding-left: 30px;
+    padding-right: 30px;
+    right: 0;
+    left: auto;
+}
+
+.new-company .mycustom-select-parent .mycustom-select .selectList li .container{
+    padding-right: 30px;
+    padding-left: 0;
+}
+
+.new-company .mycustom-select-parent .mycustom-select .selectList li .container .checkmark:after{
+    right: 6px;
+    left: auto;
+    border-width: 0 0 2px 2px ;
+}
+
+.new-company .mycustom-select-parent .mycustom-select .selectList li .checkmark{
+    right: 0;
+    left: auto;
+}
+
+.site-footer::before{
+    right: 0;
+    left: auto;
+}
+
+.site-footer .footer-links h5::after, .site-footer .footer-contact h5::after{
+    left: 0;
+    right: auto;
+}
+
+.site-footer .footer-links ul li{
+    float: left;
+}
+
+.site-footer .footer-links ul li a::before{
+    left: 0;
+    right: auto;
+    transform:rotate(180deg);
+}
+
+.site-footer .footer-links ul li a:hover{
+    padding-left: 20px;
+    padding-right: 0;
+}
+
+.site-footer .footer-contact .email-contact::after{
+    left: 0;
+    right: auto;
+}
+
+.site-footer .footer-contact .social a{
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+.site-footer .copy .copy-whats{
+    left: -90px;
+    right: auto;
+}
+
+.site-footer .copy .copy-link a::after{
+    margin-right: 10px;
+    margin-left: 13px;
+}
+
+.site-footer .copy .copy-logo{
+    text-align: right;
+}
+
+.modal{
+    padding-left: 0;
+}
+
+.modal-open{
+    padding-left: 0 !important;
+    padding-right: 0;
+}
+
+#signinModal .modal-dialog .modal-body{
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+#trackBackage .modal-body .trackForm{
+    padding-right: 53px;
+    padding-left: 0;
+}
+
+#trackBackage .modal-body .trackForm h5::after{
+    left: 0;
+    right: auto;
+}
+
+@media (max-width: 1200px){
+
+
+    .about-page .about-pg-content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+@media (max-width: 1024px){
+    .openSideMenue{
+        right: 30px;
+        left: auto;
+    }
+
+    .site-footer .copy .copy-whats img{
+        left: unset !important;
+        right: 50%;
+    }
+
+}
+
+@media (min-width:991px) and (max-width: 1080px){
+    .site-footer .copy .copy-whats{
+        left: 0;
+        right: auto;
+    }
+
+}
+
+@media (max-width: 991px){
+    .site-footer .copy .copy-whats{
+        left: unset !important;
+        right: 50%;
+    }
+
+    .vision-page .vision-content{
+        padding-left: 35px;
+        padding-right: 0;
+    }
+
+    .trackForm .input-group-append{
+        margin-left: 0;
+    }
+
+    .trackForm{
+        padding-left: 20px;
+        padding-right: 20px !important;
+    }
+
+}
+
+@media (max-width: 479px){
+    .openSideMenue{
+        right: 10px;
+        left: auto;
+    }
+
+    .contact-form{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .conact-uspage .contact-info{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .new-company .new-company-form{
+        padding: 37px 20px 50px 20px ;
+    }
+
+    .new-company .row{
+        padding-left: 10px;
+        padding-right: 0;
+    }
+
+    .new-company .aprrove label{
+        margin-left: 6px;
+        margin-right: auto;
+    }
+
+    #signinModal .modal-dialog .modal-body{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #trackBackage{
+        padding-left: 0 !important;
+        padding-right: 0;
+    }
+
+}
+
+@media (max-width: 376px){
+    .conact-uspage .contact-info{
+        padding-left: 20px !important;
+        padding-right: 13px !important;
+    }
+
+    .conact-uspage .contact-info .contact-div img{
+        margin-left: 0;
+    }
+
+}
+
+
+
+.conact-uspage .upload-file .input-group {
+    margin-top: 15px;
+  }
+  
+  .conact-uspage .upload-file .input-group .custom-file .custom-file-label{
+    height: 60px;
+    line-height: 60px;
+    background-color: #F8F8F8;
+    padding: 0;
+    padding-right: 15px;
+    border: 0;
+    color: #000;
+    font-size: 14px;
+  }
+  
+  .conact-uspage .upload-file .input-group .custom-file .custom-file-label:focus{
+    outline: 0 ;
+    box-shadow: none;
+  }
+  
+  .conact-uspage .upload-file .input-group .custom-file .custom-file-input:focus~.custom-file-label{
+    outline: 0 ;
+    box-shadow: none;
+  }
+  
+  .conact-uspage .upload-file .input-group .custom-file .custom-file-label::after{
+    content: "";
+    display: none;
+  
+  }
+   .conact-uspage .delelteFile{
+     margin-top: 15px;
+     color: #fff !important;
+     display: inline-block;
+     cursor: pointer;
+     font-size: 15px;
+     line-height: 19px;
+     display: none;
+   }
+   .conact-uspage .delelteFile i{
+    font-size: 12px;
+  }
+
