@@ -41,6 +41,17 @@ $(document).ready(function () {
   }
 
 
+  // if($('.nextPervious').length){
+  //   $('.cardNews').hover(function(){
+  //     bg = $(this).attr('data-next');
+  //     console.log(bg);
+  //     $(this).css('background-image', bg);
+  //   }, function () {
+  //     Nbg = $(this).attr('data-original');
+  //     console.log(Nbg)
+  //     $(this).css('background-image', Nbg);
+  //   })
+  // }
 
 
   var lFollowX = 0,
