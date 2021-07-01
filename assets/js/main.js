@@ -1,7 +1,7 @@
 $(document).ready(function () {
   // choses-slider
 
-  // AOS.init();
+  AOS.init();
 
   if ($(".bg-sidenavOpen").length) {
     $(".bg-sidenavOpen").on("click", function () {
@@ -37,6 +37,51 @@ $(document).ready(function () {
   if ($(".counter").length) {
     $(".counter").counterUp({
       time: 1000,
+    });
+  }
+
+
+  
+  var currentDir = $("a").css("direction");
+  console.log(currentDir);
+
+
+  if($('.services-slider').length){
+    $(".services-slider").slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 3,
+      rtl: currentDir == "rtl" ? true : false,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: true,
+      loop: true,
+      infinite: true,
+      responsive: [
+        {
+          breakpoint: 1026,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+          },
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 524,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
     });
   }
 
