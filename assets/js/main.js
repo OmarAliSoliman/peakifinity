@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   setTimeout(() => {
     splash.classList.add("displayNone");
     document.body.classList.remove("overoading");
-  }, 900);
+  }, 1500);
 });
 
 function openNav() {
