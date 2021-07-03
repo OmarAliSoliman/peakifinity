@@ -40,13 +40,10 @@ $(document).ready(function () {
     });
   }
 
-
-  
   var currentDir = $("a").css("direction");
   console.log(currentDir);
 
-
-  if($('.services-slider').length){
+  if ($(".services-slider").length) {
     $(".services-slider").slick({
       dots: true,
       infinite: false,
@@ -85,7 +82,6 @@ $(document).ready(function () {
     });
   }
 
-
   // if($('.nextPervious').length){
   //   $('.cardNews').hover(function(){
   //     bg = $(this).attr('data-next');
@@ -97,7 +93,6 @@ $(document).ready(function () {
   //     $(this).css('background-image', Nbg);
   //   })
   // }
-
 
   var lFollowX = 0,
     lFollowY = 0,
@@ -121,9 +116,9 @@ $(document).ready(function () {
     window.requestAnimationFrame(moveBackground);
   }
 
-  $('.bgMoveParent').on("mousemove click", function (e) {
+  $(".bgMoveParent").on("mousemove click", function (e) {
     var isHovered = $(".bgMove:hover").length > 0;
-    console.log(isHovered);
+    // console.log(isHovered);
 
     //if(!$(e.target).hasClass('animate-this')) {
     if (!isHovered) {
@@ -142,25 +137,56 @@ $(document).ready(function () {
   });
 
   moveBackground();
+
+  var typed = new Typed(".element", {
+    // Waits 1000ms after typing "First"
+    strings: [
+      "First ^1000 sentence.",
+      " Peakfinity is uniquely positioned to help customers with the most challenging and complex requirements to accelerate innovation of their IT environment and make the most of their investment in Oracle, Microsoft, AWS, Google, VMware DELL, IBM,& SAP technologies.",
+    ],
+    typeSpeed: 80,
+  });
+
+  $(".siteFooter").on("mousemove", function (e) {
+    $(".lichtCircle").css({
+      top: e.clientY - $(".lichtCircle").height() * 0.5,
+      left: e.clientX - $(".lichtCircle").width() * 0.5,
+    });
+  });
+
+  // $(".siteFooter").mousefollower({
+  //   followerSelector: ".lichtCircle",
+  // });
 });
-
-function openNav() {
-  document.getElementById("mySidenav").style.right = "0";
-  document.querySelector(".bg-sidenavOpen").style.display = "block";
-  document.body.classList.add("openMenuActive");
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.right = "-400px";
-  document.querySelector(".bg-sidenavOpen").style.display = "none";
-  document.body.classList.remove("openMenuActive");
-}
 
 const splash = document.querySelector(".splash");
 
 document.addEventListener("DOMContentLoaded", (e) => {
   setTimeout(() => {
     splash.classList.add("displayNone");
-  });
+    document.body.classList.remove("overoading");
+  }, 500);
 });
+
+function openNav() {
+  document.getElementById("mySidenav").style.right = "0";
+  document.querySelector(".bg-sidenavOpen").style.display = "block";
+  document.body.classList.add("openMenuActive");
+  var sideLinks = document.querySelectorAll(".sidenav .links .sideLink");
+  setTimeout(() => {
+    sideLinks.forEach((item, index) => {
+      item.classList.add("activeSideNavLinks");
+    });
+  }, 500);
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.right = "-100%";
+  document.querySelector(".bg-sidenavOpen").style.display = "none";
+  document.body.classList.remove("openMenuActive");
+  var sideLinks = document.querySelectorAll(".sidenav .links .sideLink");
+  sideLinks.forEach((item, index) => {
+    item.classList.remove("activeSideNavLinks");
+  });
+}

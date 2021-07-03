@@ -17,7 +17,7 @@
   <title>Document</title>
 </head>
 
-<body>
+<body class="overoading">
 
   <div class="bg-sidenavOpen"></div>
 
@@ -45,6 +45,18 @@
         <div class = "pulse"></div>
         <div class = "pulse"></div>
       </section>
+      <div class="loading-text">
+        <span class="loading-text-words">B</span>
+        <span class="loading-text-words">E</span>
+        <span class="loading-text-words">A</span>
+        <span class="loading-text-words">K</span>
+        <span class="loading-text-words">F</span>
+        <span class="loading-text-words">I</span>
+        <span class="loading-text-words">N</span>
+        <span class="loading-text-words">I</span>
+        <span class="loading-text-words">T</span>
+        <span class="loading-text-words">Y</span>
+      </div>
     </div>
   </div>
 
@@ -72,6 +84,38 @@
     </div>
   </div>
 
+  <div id="mySidenav" class="sidenav">
+    <img class="logo" src="./assets/images/PF.png" alt="">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+      <i class="fas fa-times"></i>
+    </a>
+    <div class="links">
+      <a href="" class="sideLink" style="background-image: url('./assets/images/Services-menu.jpg');">
+      <h5>our services</h5>
+    </a>
+      <a href="" class="sideLink">
+        <h5>about us</h5>
+      </a>
+      <a href="" class="sideLink" style="background-image: url('./assets/images/nav-work.jpg');">
+        <h5>conact us</h5>
+      </a>
+    </div>
+    <div class="clear"></div>
+    <!-- <div class="lang">
+      <span class="spanLabel">language</span>
+      <select name="" id="" class="langSelect">
+        <option value="">EN</option>
+        <option value="">AR</option>
+      </select>
+    </div> -->
+    <div class="social">
+      <a href=""><i class="fab fa-facebook-f"></i></a>
+      <a href=""><i class="fab fa-twitter"></i></a>
+      <a href=""><i class="fab fa-instagram"></i></a>
+      <a href=""><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+
   <div class="customNavbar" data-aos="fade-up" data-aos-duration="2000">
     <div class="container">
       <div class="row">
@@ -82,7 +126,7 @@
         </div>
         <div class="col col-md-6 col-lg-6">
           <div class="navIcon">
-            <a>
+            <a onclick="openNav()">
               <img src="./assets/images/icon.svg" alt="">
             </a>
           </div>
@@ -101,12 +145,10 @@
       <div class="container">
         <div class="header-content">
           <h5 class="caption-header">Peakfinity</h5>
-          <p class="caption-par">
-            Peakfinity is uniquely positioned to help customers with the most challenging and complex requirements to
-            accelerate innovation of their IT environment and make the most of their investment in Oracle, Microsoft,
-            AWS, Google, VMware DELL, IBM,& SAP technologies.
+          <p class="caption-par element">
+           
           </p>
-          <a href="" class="arrows">
+          <a href="#aboutSection" class="arrows">
             <i class="fi-rr-angle-down arrow-01"></i>
             <i class="fi-rr-angle-down arrow-02"></i>
             <i class="fi-rr-angle-down arrow-03"></i>
@@ -116,7 +158,7 @@
     </div>
   </div>
 
-  <div class="aboutHome bgMoveParent">
+  <div class="aboutHome bgMoveParent" id="aboutSection">
     <img src="./assets/images/about-after.png" alt="" class="about-after">
     <div class="container">
       <div class="row">
@@ -151,96 +193,103 @@
     </div>
   </div>
 
-  <div class="ourInsights">
-    <div class="item" style="background-image: url('./assets/images/insight-1.png');">
-      <div class="overlay"></div>
-      <div class="item-content">
-        <h5>
-          Peakfinity Advanced
-          Professional Services
-          has a comprehensive
-          portfolio
-        </h5>
-        <p>
-          Peakfinity is uniquely positioned to help customers with the most challenging and complex requirements to
-          accelerate innovation of their IT environment and make the most of their investment in Oracle, Microsoft, AWS,
-          Google, VMware DELL, IBM,& SAP technologies.
-        </p>
-        <div class="see-more">
-          <a href="">
-            <span>SEE MORE</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
+
+  <div class="our-insights-parent">
+    <div class="se-header">
+      <h5>Our Insights</h5>
+    </div>
+    <div class="ourInsights">
+      <div class="item" style="background-image: url('./assets/images/insight-1.png');">
+        <div class="overlay"></div>
+        <div class="item-content">
+          <h5>
+            Peakfinity Advanced
+            Professional Services
+            has a comprehensive
+            portfolio
+          </h5>
+          <p>
+            Peakfinity is uniquely positioned to help customers with the most challenging and complex requirements to
+            accelerate innovation of their IT environment and make the most of their investment in Oracle, Microsoft, AWS,
+            Google, VMware DELL, IBM,& SAP technologies.
+          </p>
+          <div class="see-more">
+            <a href="">
+              <span>SEE MORE</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="item" style="background-image: url('./assets/images/insight-2.png');">
-      <div class="overlay"></div>
-      <div class="item-content">
-        <h5>
-          Peakfinity Advanced
-          Professional Services
-          has a comprehensive
-          portfolio
-        </h5>
-        <p>
-          Peakfinity is uniquely positioned to help customers with the most challenging and complex requirements to
-          accelerate innovation of their IT environment and make the most of their investment in Oracle, Microsoft, AWS,
-          Google, VMware DELL, IBM,& SAP technologies.
-        </p>
-        <div class="see-more">
-          <a href="">
-            <span>SEE MORE</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
+      <div class="item" style="background-image: url('./assets/images/insight-2.png');">
+        <div class="overlay"></div>
+        <div class="item-content">
+          <h5>
+            Peakfinity Advanced
+            Professional Services
+            has a comprehensive
+            portfolio
+          </h5>
+          <p>
+            Peakfinity is uniquely positioned to help customers with the most challenging and complex requirements to
+            accelerate innovation of their IT environment and make the most of their investment in Oracle, Microsoft, AWS,
+            Google, VMware DELL, IBM,& SAP technologies.
+          </p>
+          <div class="see-more">
+            <a href="">
+              <span>SEE MORE</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="item" style="background-image: url('./assets/images/insight-3.png');">
-      <div class="overlay"></div>
-      <div class="item-content">
-        <h5>
-          Peakfinity Advanced
-          Professional Services
-          has a comprehensive
-          portfolio
-        </h5>
-        <p>
-          Peakfinity is uniquely positioned to help customers with the most challenging and complex requirements to
-          accelerate innovation of their IT environment and make the most of their investment in Oracle, Microsoft, AWS,
-          Google, VMware DELL, IBM,& SAP technologies.
-        </p>
-        <div class="see-more">
-          <a href="">
-            <span>SEE MORE</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
+      <div class="item" style="background-image: url('./assets/images/insight-3.png');">
+        <div class="overlay"></div>
+        <div class="item-content">
+          <h5>
+            Peakfinity Advanced
+            Professional Services
+            has a comprehensive
+            portfolio
+          </h5>
+          <p>
+            Peakfinity is uniquely positioned to help customers with the most challenging and complex requirements to
+            accelerate innovation of their IT environment and make the most of their investment in Oracle, Microsoft, AWS,
+            Google, VMware DELL, IBM,& SAP technologies.
+          </p>
+          <div class="see-more">
+            <a href="">
+              <span>SEE MORE</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="item" style="background-image: url('./assets/images/insight-1.png');">
-      <div class="overlay"></div>
-      <div class="item-content">
-        <h5>
-          Peakfinity Advanced
-          Professional Services
-          has a comprehensive
-          portfolio
-        </h5>
-        <p>
-          Peakfinity is uniquely positioned to help customers with the most challenging and complex requirements to
-          accelerate innovation of their IT environment and make the most of their investment in Oracle, Microsoft, AWS,
-          Google, VMware DELL, IBM,& SAP technologies.
-        </p>
-        <div class="see-more">
-          <a href="">
-            <span>SEE MORE</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
+      <div class="item" style="background-image: url('./assets/images/insight-1.png');">
+        <div class="overlay"></div>
+        <div class="item-content">
+          <h5>
+            Peakfinity Advanced
+            Professional Services
+            has a comprehensive
+            portfolio
+          </h5>
+          <p>
+            Peakfinity is uniquely positioned to help customers with the most challenging and complex requirements to
+            accelerate innovation of their IT environment and make the most of their investment in Oracle, Microsoft, AWS,
+            Google, VMware DELL, IBM,& SAP technologies.
+          </p>
+          <div class="see-more">
+            <a href="">
+              <span>SEE MORE</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 
 
   <div class="our-services bgMoveParent" data-aos="fade-up" data-aos-duration="3000">
@@ -291,6 +340,12 @@
           </div>
         </div>
       </div>
+      <div class="btn-more text-center">
+        <a href="" class="btnMore">
+          <i class="fas fa-arrow-right"></i>
+          <span>all services</span>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -310,9 +365,6 @@
       <ul class="list-unstyled footer-links" data-aos="fade-up" data-aos-duration="3000">
         <li>
           <a href="">About us</a>
-        </li>
-        <li>
-          <a href="">our insights</a>
         </li>
         <li>
           <a href="">our services</a>
@@ -354,6 +406,8 @@
   <script src="./assets/js/jquery.nice-select.min.js"></script>
   <script src="./assets/js/slick.min.js"></script>
   <script src="./assets/js/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="./assets/js/jquery.mousefollower.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 
