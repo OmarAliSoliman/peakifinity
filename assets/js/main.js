@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   setTimeout(() => {
     splash.classList.add("displayNone");
     document.body.classList.remove("overoading");
-  }, 500);
+  }, 900);
 });
 
 function openNav() {
@@ -177,7 +177,7 @@ function openNav() {
     sideLinks.forEach((item, index) => {
       item.classList.add("activeSideNavLinks");
     });
-  }, 500);
+  }, 600);
 }
 
 /* Set the width of the side navigation to 0 */
