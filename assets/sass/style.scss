@@ -102,62 +102,118 @@ button {
   max-width: 100%;
 }
 
-@media (max-width: 480px) {
-  .splash .loadProgress {
-    width: 280px;
+$s:100px;
+$i:1;
+@mixin size{
+  height:$s/5;
+  width:$s*2;
+  background:rgba(#fff, .15);
+  border:1px solid rgba(#fff, .05);
+  vertical-align:text-bottom;
+}
+.splachParent{
+  display:flex;
+  height:100vh;
+  width:100%;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+  margin:0;
+  background:#02143c;
+}
+
+.splash{
+  background:#02143c;
+  height:100%;
+  width:100%;
+  display:inherit;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transform:rotateZ(180deg);
+  .pulse{
+    @include size;
+    animation: grow 3s ease-in-out infinite;
+    margin: auto;
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}){
+        animation-delay:unquote("#{$i*.05}s")
+      }
+    }
   }
 }
 
-.splash .loadProgress .lineStyle {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 180px;
-  height: 100%;
+@keyframes grow{
+  0%,75%,100%{
+    transform:scaleX(1);
+  }
+  60%{
+    transform:scaleX(.85);
+  }
+  20%{
+    transform:scaleX(1.5);
+    background:rgba(#fff,.9);
+    border:1px solid rgba(#fff, .15);
+  }
 
-  background-color: #25a1a5;
-  -moz-animation: move-progress 3s linear infinite;
-  -ms-animation: move-progress 3s linear infinite;
-  -o-animation: move-progress 3s linear infinite;
-  -webkit-animation: move-progress 3s linear infinite;
-  animation: move-progress 3s linear infinite;
 }
 
-@keyframes move-progress {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 100%;
-  }
-}
+// @media (max-width: 480px) {
+//   .splash .loadProgress {
+//     width: 280px;
+//   }
+// }
 
-@-webkit-keyframes move-progress {
-  from {
-    left: 0;
-  }
-  to {
-    left: 100%;
-  }
-}
+// .splash .loadProgress .lineStyle {
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   width: 180px;
+//   height: 100%;
 
-@-moz-keyframes move-progress {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 100%;
-  }
-}
+//   background-color: #25a1a5;
+//   -moz-animation: move-progress 3s linear infinite;
+//   -ms-animation: move-progress 3s linear infinite;
+//   -o-animation: move-progress 3s linear infinite;
+//   -webkit-animation: move-progress 3s linear infinite;
+//   animation: move-progress 3s linear infinite;
+// }
 
-@-ms-keyframes move-progress {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 100%;
-  }
-}
+// @keyframes move-progress {
+//   from {
+//     left: -100%;
+//   }
+//   to {
+//     left: 100%;
+//   }
+// }
+
+// @-webkit-keyframes move-progress {
+//   from {
+//     left: 0;
+//   }
+//   to {
+//     left: 100%;
+//   }
+// }
+
+// @-moz-keyframes move-progress {
+//   from {
+//     left: -100%;
+//   }
+//   to {
+//     left: 100%;
+//   }
+// }
+
+// @-ms-keyframes move-progress {
+//   from {
+//     left: -100%;
+//   }
+//   to {
+//     left: 100%;
+//   }
+// }
 
 .sidenav {
   height: 100%;

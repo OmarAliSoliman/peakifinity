@@ -96,55 +96,108 @@ button {
   max-width: 100%;
 }
 
-@media (max-width: 480px) {
-  .splash .loadProgress {
-    width: 280px;
-  }
-}
-.splash .loadProgress .lineStyle {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 180px;
-  height: 100%;
-  background-color: #25a1a5;
-  -moz-animation: move-progress 3s linear infinite;
-  -ms-animation: move-progress 3s linear infinite;
-  -o-animation: move-progress 3s linear infinite;
-  -webkit-animation: move-progress 3s linear infinite;
-  animation: move-progress 3s linear infinite;
+.splachParent {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background: #02143c;
 }
 
-@keyframes move-progress {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 100%;
-  }
+.splash {
+  background: #02143c;
+  height: 100%;
+  width: 100%;
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateZ(180deg);
 }
-@-webkit-keyframes move-progress {
-  from {
-    left: 0;
-  }
-  to {
-    left: 100%;
-  }
+.splash .pulse {
+  height: 20px;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  vertical-align: text-bottom;
+  animation: grow 3s ease-in-out infinite;
+  margin: auto;
 }
-@-moz-keyframes move-progress {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 100%;
-  }
+.splash .pulse:nth-child(1) {
+  animation-delay: 0.05s;
 }
-@-ms-keyframes move-progress {
-  from {
-    left: -100%;
+.splash .pulse:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.splash .pulse:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.splash .pulse:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.splash .pulse:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.splash .pulse:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.splash .pulse:nth-child(7) {
+  animation-delay: 0.35s;
+}
+.splash .pulse:nth-child(8) {
+  animation-delay: 0.4s;
+}
+.splash .pulse:nth-child(9) {
+  animation-delay: 0.45s;
+}
+.splash .pulse:nth-child(10) {
+  animation-delay: 0.5s;
+}
+.splash .pulse:nth-child(11) {
+  animation-delay: 0.55s;
+}
+.splash .pulse:nth-child(12) {
+  animation-delay: 0.6s;
+}
+.splash .pulse:nth-child(13) {
+  animation-delay: 0.65s;
+}
+.splash .pulse:nth-child(14) {
+  animation-delay: 0.7s;
+}
+.splash .pulse:nth-child(15) {
+  animation-delay: 0.75s;
+}
+.splash .pulse:nth-child(16) {
+  animation-delay: 0.8s;
+}
+.splash .pulse:nth-child(17) {
+  animation-delay: 0.85s;
+}
+.splash .pulse:nth-child(18) {
+  animation-delay: 0.9s;
+}
+.splash .pulse:nth-child(19) {
+  animation-delay: 0.95s;
+}
+.splash .pulse:nth-child(20) {
+  animation-delay: 1s;
+}
+
+@keyframes grow {
+  0%, 75%, 100% {
+    transform: scaleX(1);
   }
-  to {
-    left: 100%;
+  60% {
+    transform: scaleX(0.85);
+  }
+  20% {
+    transform: scaleX(1.5);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
 }
 .sidenav {
