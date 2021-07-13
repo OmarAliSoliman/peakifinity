@@ -165,28 +165,44 @@ document.addEventListener("DOMContentLoaded", (e) => {
   setTimeout(() => {
     splash.classList.add("displayNone");
     document.body.classList.remove("overoading");
-  }, 3500);
+  }, 2500);
 });
 
 function openNav() {
-  document.getElementById("mySidenav").style.right = "0";
-  document.querySelector(".bg-sidenavOpen").style.display = "block";
+  document.getElementById("mySidenav").style.top = "0";
   document.body.classList.add("openMenuActive");
   var sideLinks = document.querySelectorAll(".sidenav .links .sideLink");
   setTimeout(() => {
-    sideLinks.forEach((item, index) => {
-      item.classList.add("activeSideNavLinks");
-    });
-  }, 600);
+    document
+    .querySelector(".sidenav .links")
+    .classList.add("activeSideNavLinks");
+    
+    document.querySelector(".sidenav .closebtn").classList.add("closeBtnActive");
+    document.querySelector(".sidenav .logo").classList.add("logoActive");
+    document.querySelector(".sidenav").classList.add("sidenavActive");
+  }, 400);
+
+  setTimeout(() => {
+    document.querySelector(".sidenav").classList.add("sidenavActive");
+    document.querySelector(".bg-sidenavOpen").style.display = "block";
+
+  }, 80);
 }
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-  document.getElementById("mySidenav").style.right = "-100%";
+  document.getElementById("mySidenav").style.top = "-100%";
   document.querySelector(".bg-sidenavOpen").style.display = "none";
   document.body.classList.remove("openMenuActive");
   var sideLinks = document.querySelectorAll(".sidenav .links .sideLink");
-  sideLinks.forEach((item, index) => {
-    item.classList.remove("activeSideNavLinks");
-  });
+  document
+    .querySelector(".sidenav .links")
+    .classList.remove("activeSideNavLinks");
+  // document.querySelector(".sidenav").classList.remove("sidenavActive");
+  document.querySelector(".sidenav .closebtn").classList.remove("closeBtnActive");
+  document.querySelector(".sidenav .logo").classList.remove("logoActive");
+  setTimeout(() => {
+    document.querySelector(".sidenav").classList.remove("sidenavActive");
+
+  }, 80);
 }
