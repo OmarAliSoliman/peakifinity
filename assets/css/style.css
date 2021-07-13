@@ -245,6 +245,7 @@ button {
   margin-bottom: 10px;
   width: 350px;
   height: 250px;
+  max-width: 100%;
   margin: auto;
   margin-bottom: 20px;
 }
