@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: esr;
+  src: url("../fonts/eras-medium-itc.ttf");
+}
 html {
   scroll-behavior: smooth;
 }
@@ -290,7 +294,7 @@ button {
   z-index: 99999;
   top: 0;
   right: -100%;
-  background-color: #20063C;
+  background-color: #13326F;
   box-shadow: 0 22px 22px rgba(0, 0, 0, 0.05);
   overflow-x: hidden;
   padding: 0 20px;
@@ -490,9 +494,17 @@ button {
 .customNavbar {
   padding-top: 10px;
   padding-bottom: 13px;
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  z-index: 9999;
+  width: 100%;
 }
 .customNavbar .logo {
   text-align: left;
+}
+.customNavbar .logo img {
+  width: 170px;
 }
 .customNavbar .navIcon {
   text-align: right;
@@ -500,10 +512,11 @@ button {
 }
 .customNavbar .navIcon a {
   cursor: pointer;
+  color: #fff;
 }
 .customNavbar .navIcon i {
   font-size: 20px;
-  color: #002060;
+  color: #fff;
 }
 
 .header .bg-video-wrap {
@@ -546,6 +559,7 @@ button {
   margin-bottom: 7px;
   z-index: 9999;
   position: relative;
+  font-family: esr;
 }
 .header .bg-video-wrap .header-content .caption-par {
   width: 764px;
@@ -947,6 +961,7 @@ button {
   z-index: 3;
   top: 50%;
   transform: translate(0, -50%);
+  text-transform: uppercase;
 }
 .breadcrumb h5 {
   font-size: 53px;

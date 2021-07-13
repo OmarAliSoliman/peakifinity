@@ -2,6 +2,11 @@
 $mainColor: #00133a;
 $secondColor: #fabb27;
 
+@font-face {
+  font-family: esr;
+  src: url('../fonts/eras-medium-itc.ttf');
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -224,7 +229,7 @@ $i: 1;
   z-index: 99999;
   top: 0;
   right: -100%;
-  background-color: #20063C;
+  background-color: #13326F;
   box-shadow: 0 22px 22px rgba($color: #000000, $alpha: 5%);
   overflow-x: hidden;
   padding: 0 20px;
@@ -444,18 +449,27 @@ $i: 1;
 .customNavbar {
   padding-top: 10px;
   padding-bottom: 13px;
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  z-index: 9999;
+  width: 100%;
   .logo {
     text-align: left;
+    img{
+      width: 170px;
+    }
   }
   .navIcon {
     text-align: right;
     margin-top: 16px;
     a{
       cursor: pointer;
+      color: #fff;
     }
     i {
       font-size: 20px;
-      color: #002060;
+      color: #fff;
     }
   }
 }
@@ -503,6 +517,7 @@ $i: 1;
         margin-bottom: 7px;
         z-index: 9999;
         position: relative;
+        font-family: esr;
       }
       .caption-par {
         width: 764px;
@@ -952,6 +967,7 @@ $i: 1;
     z-index: 3;
     top: 50%;
     transform: translate(0, -50%);
+    text-transform: uppercase;
   }
   h5 {
     font-size: 53px;
