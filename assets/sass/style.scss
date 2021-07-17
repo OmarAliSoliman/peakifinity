@@ -956,7 +956,8 @@ button {
       0 -1px rgba($color: #e7e7e7, $alpha: 20%);
     z-index: 3;
     top: 50%;
-    transform: translate(0, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-transform: uppercase;
   }
   h5 {
@@ -1191,7 +1192,8 @@ button {
     }
   }
   .featureList {
-    margin-top: 136px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     .listUl {
       padding-left: 160px;
       margin-top: 40px;
@@ -1757,6 +1759,12 @@ button {
     font-size: 38px;
     line-height: 48px;
   }
+  .breadcrumb.servDebreadcrumb h6{
+    font-size: 60px !important;
+  }
+  .breadcrumb h5{
+    word-break: break-all;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1825,6 +1833,7 @@ button {
   }
   .breadcrumb h6 {
     font-size: 100px;
+    word-break: break-all;
   }
   .leftCard {
     margin-bottom: 80px;
@@ -1991,6 +2000,9 @@ button {
   }
   .activeSideNavLinks:nth-child(2) {
     transform: translateY(10px) translate(0px);
+  }
+  .breadcrumb h5{
+    font-size: 40px;
   }
 }
 
