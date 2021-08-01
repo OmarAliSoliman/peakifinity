@@ -13,10 +13,10 @@ $(document).ready(function () {
 
   $(window).scroll(() => {
     if ($(this).scrollTop() > 20) {
-      $(".mynavbar").addClass("fixed-navbar");
+      $(".customNavbar").addClass("fixed-navbar");
       $("#floating").css("opacity", "1");
     } else {
-      $(".mynavbar").removeClass("fixed-navbar");
+      $(".customNavbar").removeClass("fixed-navbar");
       $("#floating").css("opacity", "0");
     }
   });

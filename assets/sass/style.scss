@@ -64,6 +64,7 @@ button {
   }
 }
 
+
 .iMenue {
   transform: rotate(-90deg);
   // @extend %transition;
@@ -463,6 +464,32 @@ button {
     }
   }
 }
+.fixedIcon{
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease-in-out;
+}
+
+
+.fixed-navbar {
+  box-shadow: 0 2px 45px rgba($color: #000000, $alpha: 5%);
+  transition: all 0.5s ease-in-out !important;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  .normalIcon{
+    display: none;
+  }
+  .fixedIcon{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 
 .header {
   .bg-video-wrap {
@@ -1653,7 +1680,7 @@ button {
   }
   .footer-logo {
     text-align: center;
-    margin-bottom: 67px;
+    margin-bottom: 37px;
   }
   .footer-links {
     text-align: center;
@@ -1691,12 +1718,11 @@ button {
     }
   }
   .copy {
-    margin-top: 70px;
-    border-top: 1px solid rgba($color: #fff, $alpha: 10%);
+    margin-top: 40px;
     padding-top: 24px;
     h5 {
       margin: 0;
-      color: rgba($color: #043baa, $alpha: 83%);
+      color: rgba($color: #fff, $alpha: 83%);
       font-size: 14px;
       text-align: left;
       font-weight: normal;
