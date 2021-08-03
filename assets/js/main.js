@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 });
 
 function openNav() {
-  document.getElementById("mySidenav").style.top = "0";
+  // document.getElementById("mySidenav").style.top = "0";
   document.body.classList.add("openMenuActive");
   var sideLinks = document.querySelectorAll(".sidenav .links .sideLink");
   setTimeout(() => {
@@ -191,7 +191,7 @@ function openNav() {
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-  document.getElementById("mySidenav").style.top = "-100%";
+  // document.getElementById("mySidenav").style.top = "-100%";
   document.querySelector(".bg-sidenavOpen").style.display = "none";
   document.body.classList.remove("openMenuActive");
   var sideLinks = document.querySelectorAll(".sidenav .links .sideLink");

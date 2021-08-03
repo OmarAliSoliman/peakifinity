@@ -191,13 +191,12 @@ button {
 }
 
 .sidenav {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   max-width: 100%;
   position: fixed;
-  z-index: 99999;
+  z-index: -1;
   top: 0;
-  top: -100%;
   background-color: transparent;
   box-shadow: 0 22px 22px rgba($color: #000000, $alpha: 5%);
   overflow-x: hidden;
@@ -206,9 +205,10 @@ button {
   transition: 0.5s;
   text-align: center;
   padding-bottom: 10px;
-  transition: all .4s ease-in-out;
-  opacity: 0;
+  transition: all .2s ease-in-out !important;
   visibility: hidden;
+  opacity: 0;
+  display: none;
   .links {
     margin-bottom: 130px;
     margin-top: 60px;
@@ -217,7 +217,6 @@ button {
       padding-top: 150px;
       visibility: hidden;
       opacity: 0;
-      transition: all 0.5s ease;
       outline: 0 !important;
       display: block;
       margin-bottom: 10px;
@@ -226,13 +225,131 @@ button {
       max-width: 100%;
       margin: auto;
       margin-bottom: 20px;
+      transition: transform 1s,opacity .8s !important;
+      position: relative;
+      overflow: hidden;
       h5 {
         color: #fff;
         text-transform: capitalize;
         font-weight: bold;
         font-size: 40px;
       }
+      span{
+        opacity: 0;
+      }
+      &:hover{
+        transform: scale(1.02) !important;
+        span{
+          opacity: 1;
+        }
+      }
+      // color: rgb(103, 124, 160);
     }
+    .sideLink span:nth-child(1) {
+      position: absolute;
+      height: 10px;
+      width: 100%;
+      background-image: linear-gradient(
+        to right,
+        rgb(255, 255, 255) 30%,
+        rgb(103, 124, 160) 100%,
+        rgb(103, 124, 160)
+      );
+      top: 0;
+      left: 0;
+      animation: line1 1s linear infinite;
+      // animation-play-state: paused;
+    }
+    
+    @keyframes line1 {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+
+    .sideLink span:nth-child(2) {
+      position: absolute;
+      height: 100%;
+      width: 10px;
+      background-image: linear-gradient(
+        to bottom,
+        rgb(255, 255, 255) 30%,
+        rgb(103, 124, 160) 100%,
+        rgb(103, 124, 160)
+      );
+      top: 0;
+      right: 0;
+      animation: line2 1s linear 1.5s infinite;
+      // animation-play-state: paused;
+    }
+    
+    @keyframes line2 {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(100%);
+      }
+    }
+    
+
+    .sideLink span:nth-child(3) {
+      position: absolute;
+      height: 10px;
+      width: 100%;
+      background-image: linear-gradient(
+        to right,
+        rgb(255, 255, 255) 30%,
+        rgb(103, 124, 160) 100%,
+        rgb(103, 124, 160)
+      );
+      bottom: 0;
+      left: 0;
+      animation: line3 1s linear infinite;
+      // animation-play-state: paused;
+    }
+    
+    @keyframes line3 {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+
+    .sideLink span:nth-child(4) {
+      position: absolute;
+      height: 100%;
+      width: 10px;
+      background-image: linear-gradient(
+        to bottom,
+        rgb(255, 255, 255) 30%,
+        rgb(103, 124, 160) 100%,
+        rgb(103, 124, 160)
+      );
+      top: 0;
+      left: 0;
+      animation: line4 1s linear 1.5s infinite;
+      // animation-play-state: paused;
+    }
+    
+    @keyframes line4 {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+    
+
+
     .aboutsideLink {
       background-color: #fff;
       h5 {
@@ -296,6 +413,8 @@ button {
   background-color: #003d94;
   opacity: 1;
   visibility: visible;
+  display: block;
+  z-index: 9999999;
 }
 
 .closeBtnActive {
@@ -584,7 +703,7 @@ button {
 }
 
 .aboutHome {
-  padding-top: 135px;
+  padding-top: 115px;
   padding-bottom: 96px;
   position: relative;
   overflow: hidden;
@@ -1726,6 +1845,10 @@ button {
       font-size: 14px;
       text-align: left;
       font-weight: normal;
+      text-transform: uppercase;
+      span{
+        text-transform: none;
+      }
     }
     .social {
       text-align: right;
@@ -2140,4 +2263,29 @@ button {
   height: 5px;
   bottom: 0;
   left: 0;
+}
+
+
+::selection{background-color: salmon; color: white;}
+.parallax > use{
+  animation:move-forever 12s linear infinite;
+  &:nth-child(1){animation-delay:-2s;}
+  &:nth-child(2){animation-delay:-2s; animation-duration:5s}
+  &:nth-child(3){animation-delay:-4s; animation-duration:3s}
+}
+
+@keyframes move-forever{
+  0%{transform: translate(-90px , 0%)}
+  100%{transform: translate(85px , 0%)} 
+}
+
+
+
+.editorial {
+  display: block;
+  width: 100%;
+  height: 3em;
+  max-height: 100vh;
+  margin: 0;
+  transform: rotate(180deg);
 }
