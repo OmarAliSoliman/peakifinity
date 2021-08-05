@@ -64,7 +64,6 @@ button {
   }
 }
 
-
 .iMenue {
   transform: rotate(-90deg);
   // @extend %transition;
@@ -205,7 +204,7 @@ button {
   transition: 0.5s;
   text-align: center;
   padding-bottom: 10px;
-  transition: all .2s ease-in-out !important;
+  transition: all 0.2s ease-in-out !important;
   visibility: hidden;
   opacity: 0;
   display: none;
@@ -225,7 +224,7 @@ button {
       max-width: 100%;
       margin: auto;
       margin-bottom: 20px;
-      transition: transform 1s,opacity .8s !important;
+      transition: transform 1s, opacity 0.8s !important;
       position: relative;
       overflow: hidden;
       h5 {
@@ -234,121 +233,75 @@ button {
         font-weight: bold;
         font-size: 40px;
       }
-      span{
-        opacity: 0;
+
+      .nav-line {
+        position: absolute;
+        background: #00e06d;
+        -webkit-transition: all 0.175s linear;
+        transition: all 0.175s linear;
+        -webkit-transition-delay: 0.175s;
+        transition-delay: 0.175s;
       }
-      &:hover{
-        transform: scale(1.02) !important;
-        span{
-          opacity: 1;
+
+      .nav-line-1 {
+        height: 15px;
+        width: 0;
+        right: 0;
+        top: 0;
+      }
+      .nav-line-2 {
+        height: 0;
+        width: 15px;
+        right: 0;
+        bottom: 0;
+      }
+      .nav-line-3 {
+        height: 15px;
+        width: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .nav-line-4 {
+        height: 0;
+        width: 15px;
+        left: 0;
+        bottom: 0;
+      }
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 15px solid transparent;
+        z-index: 9;
+        content: "";
+      }
+
+      &:hover {
+        .nav-line-1 {
+          -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+          width: 100%;
+        }
+        .nav-line-2 {
+          -webkit-transition-delay: 0.175s;
+          transition-delay: 0.175s;
+          height: 100%;
+        }
+        .nav-line-3 {
+          -webkit-transition-delay: 0.175s;
+          transition-delay: 0.175s;
+          width: 100%;
+        }
+        .nav-line-4 {
+          -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+          height: 100%;
         }
       }
-      // color: rgb(103, 124, 160);
     }
-    .sideLink span:nth-child(1) {
-      position: absolute;
-      height: 10px;
-      width: 100%;
-      background-image: linear-gradient(
-        to right,
-        rgb(255, 255, 255) 30%,
-        rgb(103, 124, 160) 100%,
-        rgb(103, 124, 160)
-      );
-      top: 0;
-      left: 0;
-      animation: line1 1s linear infinite;
-      // animation-play-state: paused;
-    }
-    
-    @keyframes line1 {
-      0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(100%);
-      }
-    }
-
-
-    .sideLink span:nth-child(2) {
-      position: absolute;
-      height: 100%;
-      width: 10px;
-      background-image: linear-gradient(
-        to bottom,
-        rgb(255, 255, 255) 30%,
-        rgb(103, 124, 160) 100%,
-        rgb(103, 124, 160)
-      );
-      top: 0;
-      right: 0;
-      animation: line2 1s linear 1.5s infinite;
-      // animation-play-state: paused;
-    }
-    
-    @keyframes line2 {
-      0% {
-        transform: translateY(-100%);
-      }
-      100% {
-        transform: translateY(100%);
-      }
-    }
-    
-
-    .sideLink span:nth-child(3) {
-      position: absolute;
-      height: 10px;
-      width: 100%;
-      background-image: linear-gradient(
-        to right,
-        rgb(255, 255, 255) 30%,
-        rgb(103, 124, 160) 100%,
-        rgb(103, 124, 160)
-      );
-      bottom: 0;
-      left: 0;
-      animation: line3 1s linear infinite;
-      // animation-play-state: paused;
-    }
-    
-    @keyframes line3 {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-
-
-    .sideLink span:nth-child(4) {
-      position: absolute;
-      height: 100%;
-      width: 10px;
-      background-image: linear-gradient(
-        to bottom,
-        rgb(255, 255, 255) 30%,
-        rgb(103, 124, 160) 100%,
-        rgb(103, 124, 160)
-      );
-      top: 0;
-      left: 0;
-      animation: line4 1s linear 1.5s infinite;
-      // animation-play-state: paused;
-    }
-    
-    @keyframes line4 {
-      0% {
-        transform: translateY(100%);
-      }
-      100% {
-        transform: translateY(-100%);
-      }
-    }
-    
-
 
     .aboutsideLink {
       background-color: #fff;
@@ -583,13 +536,12 @@ button {
     }
   }
 }
-.fixedIcon{
+.fixedIcon {
   display: none;
   opacity: 0;
   visibility: hidden;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-
 
 .fixed-navbar {
   box-shadow: 0 2px 45px rgba($color: #000000, $alpha: 5%);
@@ -599,16 +551,15 @@ button {
   top: 0;
   width: 100%;
   background-color: #fff;
-  .normalIcon{
+  .normalIcon {
     display: none;
   }
-  .fixedIcon{
+  .fixedIcon {
     display: block;
     opacity: 1;
     visibility: visible;
   }
 }
-
 
 .header {
   .bg-video-wrap {
@@ -1274,13 +1225,18 @@ button {
     }
     .serv-img {
       text-align: right;
+      img{
+        width: 80% !important;
+      }
       .imgAfter {
         position: absolute;
-        right: -100px;
-        top: 53px;
+        right: -70px;
+        top: 63px;
         z-index: -1;
+        width: 90% !important;
         img {
           opacity: 0.6;
+          // width: 80% !important;
         }
         &::after {
           content: "";
@@ -1846,7 +1802,7 @@ button {
       text-align: left;
       font-weight: normal;
       text-transform: uppercase;
-      span{
+      span {
         text-transform: none;
       }
     }
@@ -1861,8 +1817,8 @@ button {
   }
 }
 
-.breadcrumb.servDebreadcrumb{
-  h6{
+.breadcrumb.servDebreadcrumb {
+  h6 {
     font-size: 100px !important;
   }
 }
@@ -1908,10 +1864,10 @@ button {
     font-size: 38px;
     line-height: 48px;
   }
-  .breadcrumb.servDebreadcrumb h6{
+  .breadcrumb.servDebreadcrumb h6 {
     font-size: 60px !important;
   }
-  .breadcrumb h5{
+  .breadcrumb h5 {
     word-break: break-all;
   }
 }
@@ -2150,7 +2106,7 @@ button {
   .activeSideNavLinks:nth-child(2) {
     transform: translateY(10px) translate(0px);
   }
-  .breadcrumb h5{
+  .breadcrumb h5 {
     font-size: 40px;
   }
 }
@@ -2265,21 +2221,33 @@ button {
   left: 0;
 }
 
-
-::selection{background-color: salmon; color: white;}
-.parallax > use{
-  animation:move-forever 12s linear infinite;
-  &:nth-child(1){animation-delay:-2s;}
-  &:nth-child(2){animation-delay:-2s; animation-duration:5s}
-  &:nth-child(3){animation-delay:-4s; animation-duration:3s}
+::selection {
+  background-color: salmon;
+  color: white;
+}
+.parallax > use {
+  animation: move-forever 12s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+  &:nth-child(2) {
+    animation-delay: -2s;
+    animation-duration: 5s;
+  }
+  &:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 3s;
+  }
 }
 
-@keyframes move-forever{
-  0%{transform: translate(-90px , 0%)}
-  100%{transform: translate(85px , 0%)} 
+@keyframes move-forever {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
 }
-
-
 
 .editorial {
   display: block;
@@ -2289,3 +2257,49 @@ button {
   margin: 0;
   transform: rotate(180deg);
 }
+
+.about-img {
+  position: relative;
+  .wrapper {
+    position: absolute;
+    z-index: -1;
+    left: 17px;
+    top: -86px;
+
+    svg {
+      width: 230px;
+    }
+  }
+}
+
+.our-services{
+  .section-header{
+    position: relative;
+    .shape-anim {
+
+      svg{
+        width: 150px;
+        height: fit-content;
+        position: absolute;
+        left: 37px;
+        top: -18px;
+        z-index: -1;
+      }
+      .path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 5s linear alternate infinite;
+      }
+    
+      @keyframes dash {
+        0% {
+          stroke-dashoffset: 1000;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+    }
+  }
+}
+
