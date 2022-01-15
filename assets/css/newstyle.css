@@ -1,0 +1,124 @@
+.customNavbar .logo img {
+  width: 40px;
+}
+
+.customNavbar .logo .fixedlogo {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fixed-navbar .logo .originallogo {
+  opacity: 0;
+  visibility: hidden;
+  display: none !important;
+}
+
+.fixed-navbar .logo .fixedlogo {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.sidenav .logo {
+  width: 50px;
+}
+
+.links {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.links ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50% !important;
+}
+
+.links ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 0 !important;
+  height: 250px !important;
+}
+
+.links ul li a h5 {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+.links ul li .customHeight {
+  height: 160px !important;
+}
+
+.links ul .customli {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.links ul .customli a {
+  margin-bottom: 0 !important;
+}
+
+.links ul .customli h5 {
+  position: absolute;
+  top: unset;
+  bottom: 10px;
+}
+
+.siteFooter .footer-logo img {
+  width: 50px;
+}
+
+.sidenav .links .sideLink {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .sidenav .links ul {
+    width: 100%;
+  }
+}
+
+@media (max-width: 766px) {
+  .sidenav .links ul {
+    display: block;
+  }
+  .sidenav .links ul li {
+    width: 100% !important;
+  }
+  .sidenav .links ul .customli {
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  .sidenav .links ul .customli a {
+    margin-bottom: 20px !important;
+  }
+}
+/*# sourceMappingURL=newstyle.css.map */
