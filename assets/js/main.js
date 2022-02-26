@@ -43,44 +43,44 @@ $(document).ready(function () {
   var currentDir = $("a").css("direction");
   console.log(currentDir);
 
-  if ($(".services-slider").length) {
-    $(".services-slider").slick({
-      dots: true,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 3,
-      rtl: currentDir == "rtl" ? true : false,
-      slidesToScroll: 1,
-      autoplay: true,
-      arrows: true,
-      loop: true,
-      infinite: true,
-      responsive: [
-        {
-          breakpoint: 1026,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            infinite: true,
-          },
-        },
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-          },
-        },
-        {
-          breakpoint: 524,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
-        },
-      ],
-    });
-  }
+  // if ($(".services-slider").length) {
+  //   $(".services-slider").slick({
+  //     dots: true,
+  //     infinite: false,
+  //     speed: 300,
+  //     slidesToShow: 3,
+  //     rtl: currentDir == "rtl" ? true : false,
+  //     slidesToScroll: 1,
+  //     autoplay: true,
+  //     arrows: true,
+  //     loop: true,
+  //     infinite: true,
+  //     responsive: [
+  //       {
+  //         breakpoint: 1026,
+  //         settings: {
+  //           slidesToShow: 2,
+  //           slidesToScroll: 1,
+  //           infinite: true,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 992,
+  //         settings: {
+  //           slidesToShow: 2,
+  //           slidesToScroll: 1,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 524,
+  //         settings: {
+  //           slidesToShow: 1,
+  //           slidesToScroll: 1,
+  //         },
+  //       },
+  //     ],
+  //   });
+  // }
 
   // if($('.nextPervious').length){
   //   $('.cardNews').hover(function(){
@@ -153,6 +153,18 @@ $(document).ready(function () {
       left: e.clientX - $(".lichtCircle").width() * 0.5,
     });
   });
+
+
+  if($(".newservices-slider").length){
+    $(".newservices-slider").slick({
+      dots: true,
+      fade: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      // speed: 2000,
+      arrows: true,
+    })
+  }
 
   // $(".siteFooter").mousefollower({
   //   followerSelector: ".lichtCircle",

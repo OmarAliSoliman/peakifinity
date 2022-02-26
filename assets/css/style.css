@@ -740,7 +740,7 @@ button {
   background-position: center !important;
 }
 .ourInsights .item:hover {
-  flex-grow: 2.3;
+  flex-grow: 2;
   background-color: #f10000;
 }
 .ourInsights .item:hover .item-content {
