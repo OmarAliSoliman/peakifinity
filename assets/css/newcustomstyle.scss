@@ -1,0 +1,38 @@
+$mainColor: #00133a;
+
+
+.box-container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  // z-index: 999;
+  .box-parent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img, video{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $mainColor;
+    opacity: .8;
+    
+  }
+  .breadcumb-header{
+    color: transparent;
+    opacity: .25;
+    // z-index: -1;
+    text-shadow: -1px 0 rgba(231, 231, 231, 10%), 0 1px rgba(231, 231, 231, 10%), 1px 0 rgba(231, 231, 231, 10%), 0 -1px rgba(231, 231, 231, 10%);
+  }
+}

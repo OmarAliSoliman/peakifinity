@@ -1,0 +1,38 @@
+.box-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.box-container .box-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.box-container .box-parent img, .box-container .box-parent video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.box-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00133a;
+  opacity: .8;
+}
+
+.box-container .breadcumb-header {
+  color: transparent;
+  opacity: .25;
+  text-shadow: -1px 0 #e7e7e7, 0 1px #e7e7e7, 1px 0 #e7e7e7, 0 -1px #e7e7e7;
+}
+/*# sourceMappingURL=newcustomstyle.css.map */
