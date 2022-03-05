@@ -556,7 +556,7 @@ button {
   visibility: visible;
 }
 
-.header .bg-video-wrap {
+/* .header .bg-video-wrap {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -567,7 +567,7 @@ button {
   min-width: 100%;
   min-height: 100vh;
   z-index: 1;
-}
+} */
 .header .bg-video-wrap::after {
   content: "";
   width: 100%;
